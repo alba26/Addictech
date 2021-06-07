@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		920BDBF8266DC0EF00CE2046 /* AdditechData.json in Resources */ = {isa = PBXBuildFile; fileRef = 920BDBF7266DC0EF00CE2046 /* AdditechData.json */; };
+		920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BDBFA266DC53500CE2046 /* Dictionary.swift */; };
 		92CCBC0E2668786B00DBCCBD /* AddictechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CCBC0D2668786B00DBCCBD /* AddictechApp.swift */; };
 		92CCBC102668786B00DBCCBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CCBC0F2668786B00DBCCBD /* ContentView.swift */; };
 		92CCBC122668786B00DBCCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CCBC112668786B00DBCCBD /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		920BDBF7266DC0EF00CE2046 /* AdditechData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdditechData.json; sourceTree = "<group>"; };
+		920BDBFA266DC53500CE2046 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		92CCBC0A2668786B00DBCCBD /* Addictech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Addictech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CCBC0D2668786B00DBCCBD /* AddictechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddictechApp.swift; sourceTree = "<group>"; };
 		92CCBC0F2668786B00DBCCBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		920BDBF9266DC49000CE2046 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				920BDBFA266DC53500CE2046 /* Dictionary.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		92CCBC012668786B00DBCCBD = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		92CCBC0C2668786B00DBCCBD /* Addictech */ = {
 			isa = PBXGroup;
 			children = (
+				920BDBF9266DC49000CE2046 /* Model */,
 				920BDBF7266DC0EF00CE2046 /* AdditechData.json */,
 				92CCBC0D2668786B00DBCCBD /* AddictechApp.swift */,
 				92CCBC0F2668786B00DBCCBD /* ContentView.swift */,
@@ -144,6 +155,7 @@
 			files = (
 				92CCBC102668786B00DBCCBD /* ContentView.swift in Sources */,
 				92CCBC0E2668786B00DBCCBD /* AddictechApp.swift in Sources */,
+				920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
