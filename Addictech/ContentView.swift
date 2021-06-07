@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
-var test = "testing"
+// var test = "testing"
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world! Kita Addictech, Team terbaik Apple Academy")
-            .padding()
+        NavigationView {
+            List(0 ..< 40) { item in
+                Text("Hello, World!")
+                //.padding()
+            }
+            .navigationTitle("Addictech")
+        }
     }
 }
 
