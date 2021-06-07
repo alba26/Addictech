@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+var test = "testing"
 struct ContentView: View {
     var body: some View {
         NavigationView {
