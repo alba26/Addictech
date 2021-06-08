@@ -8,11 +8,11 @@
 import SwiftUI
 // var test = "testing"
 struct ContentView: View {
+    @ObservedObject var fetchDictionaries = Dictionaries()
     var body: some View {
         NavigationView {
-            List(0 ..< 40) { item in
-                Text("Hello, World!")
-                //.padding()
+            List(fetchDictionaries.dictionaryData, id: \.keywords){item in
+                Text(item.keywords)
             }
             .navigationTitle("Addictech")
         }
