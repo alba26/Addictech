@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-// var test = "testing"
+var test = "testing"
 struct ContentView: View {
     @ObservedObject var fetchDictionaries = Dictionaries()
     var body: some View {
