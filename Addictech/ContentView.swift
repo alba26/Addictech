@@ -7,14 +7,31 @@
 
 import SwiftUI
 // var test = "testing"
+
+
 struct ContentView: View {
+    @State private var searchText : String = ""
+    
     @ObservedObject var fetchDictionaries = Dictionaries()
     var body: some View {
         NavigationView {
-            List(fetchDictionaries.dictionaryData, id: \.keywords){item in
-                Text(item.keywords)
+            VStack {
+                SearchBar(text: $searchText)
+                
+                List {
+                ForEach(self.fetchDictionaries.dictionaryData.filter {
+                    self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
+                }, id: \.keywords){item in
+                    Text(item.keywords)
+                }
+                }
+                Spacer()
+                
+                //List(fetchDictionaries.dictionaryData, id: \.keywords){item in
+                //Text(item.keywords)
+                //}
+                .navigationTitle("Addictech")
             }
-            .navigationTitle("Addictech")
         }
     }
 }

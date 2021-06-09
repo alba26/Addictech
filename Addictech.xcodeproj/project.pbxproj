@@ -15,6 +15,7 @@
 		92CCBC102668786B00DBCCBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CCBC0F2668786B00DBCCBD /* ContentView.swift */; };
 		92CCBC122668786B00DBCCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CCBC112668786B00DBCCBD /* Assets.xcassets */; };
 		92CCBC152668786B00DBCCBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CCBC142668786B00DBCCBD /* Preview Assets.xcassets */; };
+		BA21DF0B26705B2200042D2A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21DF0A26705B2200042D2A /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		92CCBC112668786B00DBCCBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92CCBC142668786B00DBCCBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92CCBC162668786B00DBCCBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA21DF0A26705B2200042D2A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				920BDBF7266DC0EF00CE2046 /* AdditechData.json */,
 				92CCBC0D2668786B00DBCCBD /* AddictechApp.swift */,
 				92CCBC0F2668786B00DBCCBD /* ContentView.swift */,
+				BA21DF0A26705B2200042D2A /* SearchBar.swift */,
 				92CCBC112668786B00DBCCBD /* Assets.xcassets */,
 				92CCBC162668786B00DBCCBD /* Info.plist */,
 				92CCBC132668786B00DBCCBD /* Preview Content */,
@@ -164,6 +167,7 @@
 				920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */,
 				920BDBFF266DE4E200CE2046 /* DetailView.swift in Sources */,
 				920BDBFD266DD99800CE2046 /* Dictionaries.swift in Sources */,
+				BA21DF0B26705B2200042D2A /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
