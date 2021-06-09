@@ -91,6 +91,7 @@ func makeUIViewController () -> UINavigationController {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
     }
 }
 
