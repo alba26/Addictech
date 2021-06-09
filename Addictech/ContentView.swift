@@ -92,3 +92,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+extension Color {
+    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
+}
