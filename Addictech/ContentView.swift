@@ -9,12 +9,17 @@ import SwiftUI
 // var test = "testing"
 struct ContentView: View {
     @ObservedObject var fetchDictionaries = Dictionaries()
+    init() {
+        UINavigationBar.appearance().backgroundColor = .blue
+        UINavigationBar.appearance().barTintColor = .blue
+    }
     var body: some View {
         NavigationView {
             List(fetchDictionaries.dictionaryData, id: \.keywords){item in
                 Text(item.keywords)
             }
             .navigationTitle("Addictech")
+            
         }
     }
 }
