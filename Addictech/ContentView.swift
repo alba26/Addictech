@@ -21,7 +21,6 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 SearchBar(text: $searchText)
-                
                 List {
                 ForEach(self.fetchDictionaries.dictionaryData.filter {
                     self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
@@ -29,12 +28,9 @@ struct ContentView: View {
                     Text(item.keywords)
                 }
                 }
-                Spacer()
-                
                 //List(fetchDictionaries.dictionaryData, id: \.keywords){item in
                 //Text(item.keywords)
                 //}
-                .navigationTitle("Addictech")
             }
             .navigationTitle("Addictech")
             
