@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct ContentView: View {
+    
     @State private var searchText : String = ""
     
     @ObservedObject var fetchDictionaries = Dictionaries()
@@ -91,4 +92,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension Color {
+    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
 }
