@@ -75,9 +75,9 @@
 				920BDBF7266DC0EF00CE2046 /* AdditechData.json */,
 				92CCBC0D2668786B00DBCCBD /* AddictechApp.swift */,
 				92CCBC0F2668786B00DBCCBD /* ContentView.swift */,
+				92CCBC162668786B00DBCCBD /* Info.plist */,
 				BA21DF0A26705B2200042D2A /* SearchBar.swift */,
 				92CCBC112668786B00DBCCBD /* Assets.xcassets */,
-				92CCBC162668786B00DBCCBD /* Info.plist */,
 				92CCBC132668786B00DBCCBD /* Preview Content */,
 				920BDBFE266DE4E200CE2046 /* DetailView.swift */,
 			);
