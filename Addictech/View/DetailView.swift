@@ -9,6 +9,9 @@ import SwiftUI
 
 struct DetailView: View {
     let dictionary: Dictionary
+    var isFavorite = false
+    let userDefaults = UserDefaults()
+    
     var body: some View {
         ScrollView {
             VStack{
@@ -20,13 +23,15 @@ struct DetailView: View {
                     RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
                         .frame(height: 295.0)
                         .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
-                VStack(alignment: .leading, spacing: 5){
-                    Text("Tech Explanation")
-                        .font(.callout)
-                        .bold()
-                    Text(dictionary.tech_explanation)
-                        .font(.footnote)
-                }
+                    VStack(alignment: .leading, spacing: 5){
+                        Text("Tech Explanation")
+                            .font(.callout)
+                            .bold()
+                        Text(dictionary.tech_explanation)
+                            .font(.footnote)
+                    }
+                    
+                    
                 }
                 
                 VStack(alignment: .leading, spacing: 5){
@@ -41,12 +46,12 @@ struct DetailView: View {
                             Text(dictionary.analogy)
                                 .font(.footnote)
                         }
-                }
+                    }
                 }
             }
             .padding(.leading)
             .padding(.trailing)
-        
+            
             
         }.background(Color("Color"))
         
