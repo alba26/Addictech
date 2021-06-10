@@ -13,8 +13,8 @@ struct ContentView: View {
     @State private var searchText : String = ""
     @ObservedObject var fetchDictionaries = Dictionaries()
     init() {
-        UINavigationBar.appearance().backgroundColor = .blue
-        UINavigationBar.appearance().barTintColor = .blue
+        UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.002132764552, green: 0.1801773906, blue: 0.4192627668, alpha: 1)
     }
     var body: some View {
         NavigationView {
@@ -34,13 +34,10 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Addictech")
-
                 .listStyle(GroupedListStyle())
-                
             }
-            
+            .accentColor(Color(.label))
         }
-
     }
 }
 
@@ -56,6 +53,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
     }
 }
 
