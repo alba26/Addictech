@@ -9,13 +9,16 @@ import SwiftUI
 // var test = "testing"
 
 
-struct ContentView: View {
+struct MainView: View {
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
+        
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.002132764552, green: 0.1801773906, blue: 0.4192627668, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
 //        UISearchBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
 //        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
@@ -71,9 +74,9 @@ struct ContentView: View {
 //    return controller
 //}
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
             .preferredColorScheme(.light)
     }
 }

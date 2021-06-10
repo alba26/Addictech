@@ -11,7 +11,9 @@ struct DetailView: View {
     let dictionary: Dictionary
     var body: some View {
         ScrollView {
-        
+            VStack{
+                Text("test")
+            }
             VStack(alignment: .leading, spacing: 15){
                 Spacer()
                 ZStack{
