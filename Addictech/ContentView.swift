@@ -91,10 +91,13 @@ func makeUIViewController () -> UINavigationController {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.light)
     }
 }
 
 extension Color {
     static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
 }
+
+//extension Color {
+//    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
+//}
