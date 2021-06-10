@@ -9,13 +9,15 @@ import SwiftUI
 
 struct DetailView: View {
     let dictionary: Dictionary
-    var isFavorite = false
-    let userDefaults = UserDefaults()
-    
+    var textSpeech = TextToSpeech()
     var body: some View {
         ScrollView {
             VStack{
-                Text("test")
+                Button(action: {
+                    self.textSpeech.speak(keywords: dictionary.keywords)
+                }, label: {
+                    Text("Speaker")
+                })
             }
             VStack(alignment: .leading, spacing: 15){
                 Spacer()
@@ -30,8 +32,6 @@ struct DetailView: View {
                         Text(dictionary.tech_explanation)
                             .font(.footnote)
                     }
-                    
-                    
                 }
                 
                 VStack(alignment: .leading, spacing: 5){
