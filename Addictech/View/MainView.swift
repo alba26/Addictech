@@ -24,7 +24,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
+       
                 
                 List {
                     HStack{
@@ -38,6 +38,7 @@ struct ContentView: View {
                     }
                     
                     
+                    
                         
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
                         self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
@@ -48,10 +49,10 @@ struct ContentView: View {
                                 Text(item.keywords)
                             })
                     }
-                }
-                .navigationTitle("Addictech")
+                }.background(Image("Background"))
+        .navigationTitle("Dictionary")
                 .listStyle(GroupedListStyle())
-            }
+            
             .accentColor(Color(.label))
         }.sheet(isPresented: $showInfoModalView, content: {
             
