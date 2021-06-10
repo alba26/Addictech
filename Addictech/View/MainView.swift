@@ -44,7 +44,7 @@ struct MainView: View {
                         .foregroundColor(Color.white)
                 }
             }
-            .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 12.0/*@END_MENU_TOKEN@*/)
+            .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 10.0/*@END_MENU_TOKEN@*/)
             
                 
             
