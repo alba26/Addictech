@@ -13,6 +13,6 @@ class Dictionaries: ObservableObject{
         let url = Bundle.main.url(forResource: "AdditechData", withExtension: ".json")!
         let data = try! Data(contentsOf: url)
         dictionaryData = try! JSONDecoder().decode([Dictionary].self, from: data)
-        print(dictionaryData)
+        //print(dictionaryData)
     }
 }

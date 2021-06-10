@@ -35,7 +35,7 @@ struct DetailView: View {
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                     Section(header: Text("Analogy")){
-                        Image("potrait_pic")
+                        Image(dictionary.image_name)
                             .resizable()
                             .scaledToFit()
                             .padding(.top)
