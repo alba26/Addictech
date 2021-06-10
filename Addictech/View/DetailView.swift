@@ -11,10 +11,13 @@ struct DetailView: View {
     let dictionary: Dictionary
     var textSpeech = TextToSpeech()
     var body: some View {
+        
         List{
             Section(){
-                HStack{
+                HStack(spacing: 20.0){
                     Text(dictionary.keywords)
+                        .font(.title)
+                        .fontWeight(.bold)
                     Button(action: {
                                         self.textSpeech.speak(keywords: dictionary.keywords)
                                     }, label: {
@@ -25,9 +28,11 @@ struct DetailView: View {
                 
                 
             }
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
                 Section(header: Text("Tech Explanation")){
                     Text(dictionary.tech_explanation)}
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                     Section(header: Text("Analogy")){
                         Image("potrait_pic")
@@ -38,10 +43,11 @@ struct DetailView: View {
                         Text(dictionary.analogy)
                             
                     }
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
 
         }
-        .listStyle(InsetGroupedListStyle())
         
+        .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("", displayMode: .inline)
         
         
