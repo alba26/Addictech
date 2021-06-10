@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailView: View {
     let dictionary: Dictionary
     var textSpeech = TextToSpeech()
+    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
     var body: some View {
         
         List{
@@ -25,13 +26,23 @@ struct DetailView: View {
                                     })
                     .buttonStyle(BorderlessButtonStyle())
                 }
-                
-                
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
-                Section(header: Text("Tech Explanation")){
-                    Text(dictionary.tech_explanation)}
+            Section(header: Text("Tech Explanation")){
+                
+                HStack {
+                    Text(dictionary.tech_explanation)
+                    Spacer()
+                    Button(action: {
+                        self.isFavorite = true
+                        UserDefaults.standard.set(self.isFavorite, forKey: "Tap")
+                    }, label: {
+                        Image(systemName: "star")
+                    })
+                }
+            }
+                    
                     .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                     Section(header: Text("Analogy")){
