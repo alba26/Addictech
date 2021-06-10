@@ -31,6 +31,9 @@ struct MainView: View {
     
     var body: some View {
         NavigationView {
+            ZStack{
+                Color("DarkBlue")
+                    .ignoresSafeArea()
             VStack{
             HStack{
                 SearchBar(text: $searchText)
@@ -42,7 +45,9 @@ struct MainView: View {
                 }
             }
             .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 12.0/*@END_MENU_TOKEN@*/)
-            .background(Color("DarkBlue"))
+            
+                
+            
                 ZStack{
                     RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
                         .foregroundColor(Color("Color"))
@@ -62,11 +67,12 @@ struct MainView: View {
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .navigationTitle("Dictionary")
                 .listStyle(GroupedListStyle())
-            }
+                }
                 .accentColor(Color(.label))
                 
                 
-            }.background(Color("DarkBlue"))
+            }
+        }
         }
         .sheet(isPresented: $showInfoModalView, content: {
             
