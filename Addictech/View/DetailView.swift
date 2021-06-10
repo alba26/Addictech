@@ -32,7 +32,6 @@ struct DetailView: View {
             .padding(.leading)
             .padding(.trailing)
            
-           
         }
         
         .navigationBarTitle(dictionary.keywords)
