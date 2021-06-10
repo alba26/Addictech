@@ -14,7 +14,10 @@ struct ContentView: View {
     @ObservedObject var fetchDictionaries = Dictionaries()
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
+        
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.002132764552, green: 0.1801773906, blue: 0.4192627668, alpha: 1)
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     var body: some View {
         NavigationView {
@@ -22,7 +25,7 @@ struct ContentView: View {
                 
                 List {
                     SearchBar(text: $searchText)
-                    
+                        .background(Color("DarkBlue"))
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
                         self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
                     }, id: \.keywords){item in
