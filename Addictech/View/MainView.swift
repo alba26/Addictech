@@ -22,6 +22,7 @@ struct ContentView: View {
                 
                 List {
                     SearchBar(text: $searchText)
+                    
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
                         self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
                     }, id: \.keywords){item in
@@ -37,7 +38,6 @@ struct ContentView: View {
                 .listStyle(GroupedListStyle())
                 
             }
-            .accentColor(Color(.label))
             
         }
 
