@@ -77,8 +77,6 @@ struct MainView: View {
         .sheet(isPresented: $showInfoModalView, content: {
             
                 filtermodal()
-                
-            
         })
     }
 }
