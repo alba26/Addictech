@@ -11,7 +11,9 @@ struct DetailView: View {
     let dictionary: Dictionary
     var body: some View {
         ScrollView {
-        
+            VStack{
+                Text("test")
+            }
             VStack(alignment: .leading, spacing: 15){
                 Spacer()
                 ZStack{
@@ -47,7 +49,7 @@ struct DetailView: View {
         
             
         }.background(Color("Color"))
-        .ignoresSafeArea(.all)
+        
         
         .navigationBarTitle(dictionary.keywords)
     }
