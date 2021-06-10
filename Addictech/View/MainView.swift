@@ -19,6 +19,9 @@ struct MainView: View {
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.002132764552, green: 0.1801773906, blue: 0.4192627668, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UITableView.appearance().contentInset.top = -35
+     
+        
         
 //        UISearchBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
 //        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
@@ -38,7 +41,12 @@ struct MainView: View {
                         .foregroundColor(Color.white)
                 }
             }
+            .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 12.0/*@END_MENU_TOKEN@*/)
             .background(Color("navy blue"))
+                ZStack{
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .ignoresSafeArea()
                 List {
                 
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
@@ -51,12 +59,16 @@ struct MainView: View {
                             })
                     }
                 }
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
         .navigationTitle("Dictionary")
                 .listStyle(GroupedListStyle())
-            
-            .accentColor(Color(.label))
+            }
+                .accentColor(Color(.label))
+                
+                
+            }.background(Color("navy blue"))
         }
-        }.sheet(isPresented: $showInfoModalView, content: {
+        .sheet(isPresented: $showInfoModalView, content: {
             
                 filtermodal()
                 
