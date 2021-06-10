@@ -20,6 +20,8 @@ struct MainView: View {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
+        
+        
 //        UISearchBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
 //        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         
@@ -38,6 +40,7 @@ struct MainView: View {
                         .foregroundColor(Color.white)
                 }
             }
+            .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 12.0/*@END_MENU_TOKEN@*/)
             .background(Color("navy blue"))
                 List {
                 
@@ -55,8 +58,9 @@ struct MainView: View {
                 .listStyle(GroupedListStyle())
             
             .accentColor(Color(.label))
+            }
         }
-        }.sheet(isPresented: $showInfoModalView, content: {
+        .sheet(isPresented: $showInfoModalView, content: {
             
                 filtermodal()
                 
