@@ -42,10 +42,10 @@ struct MainView: View {
                 }
             }
             .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 12.0/*@END_MENU_TOKEN@*/)
-            .background(Color("navy blue"))
+            .background(Color("DarkBlue"))
                 ZStack{
                     RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(Color("Color"))
                         .ignoresSafeArea()
                 List {
                 
@@ -66,7 +66,7 @@ struct MainView: View {
                 .accentColor(Color(.label))
                 
                 
-            }.background(Color("navy blue"))
+            }.background(Color("DarkBlue"))
         }
         .sheet(isPresented: $showInfoModalView, content: {
             
