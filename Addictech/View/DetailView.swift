@@ -32,12 +32,13 @@ struct DetailView: View {
                         Text(dictionary.tech_explanation)
                             .font(.footnote)
                     }
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 }
                 
                 VStack(alignment: .leading, spacing: 5){
                     ZStack{
                         RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
-                            .frame(height: 295.0)
+                            
                             .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
                         VStack(alignment: .leading, spacing: 5.0){
                             Text("Analogy")
@@ -46,6 +47,7 @@ struct DetailView: View {
                             Text(dictionary.analogy)
                                 .font(.footnote)
                         }
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     }
                 }
             }
