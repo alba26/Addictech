@@ -51,7 +51,7 @@ struct MainView: View {
                             })
                     }
                 }
-        .navigationTitle("Dictionary")
+                .navigationTitle("Dictionary")
                 .listStyle(GroupedListStyle())
             
             .accentColor(Color(.label))
@@ -59,8 +59,6 @@ struct MainView: View {
         }.sheet(isPresented: $showInfoModalView, content: {
             
                 filtermodal()
-                
-            
         })
     }
 }
