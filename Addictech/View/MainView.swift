@@ -9,7 +9,7 @@ import SwiftUI
 // var test = "testing"
 
 
-struct ContentView: View {
+struct MainView: View {
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
@@ -72,9 +72,9 @@ struct ContentView: View {
 //    return controller
 //}
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
             .preferredColorScheme(.light)
     }
 }
