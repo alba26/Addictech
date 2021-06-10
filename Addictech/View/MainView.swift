@@ -21,7 +21,18 @@ struct ContentView: View {
             VStack {
                 
                 List {
-                    SearchBar(text: $searchText)
+                    HStack{
+                        SearchBar(text: $searchText)
+                        Button(action: {
+                            
+                        }) {
+                            Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
+                                .foregroundColor(Color.blue)
+                        }
+                    }
+                    
+                    
+                        
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
                         self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
                     }, id: \.keywords){item in
