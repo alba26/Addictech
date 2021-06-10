@@ -54,10 +54,10 @@ struct ContentView: View {
             }
             .accentColor(Color(.label))
         }.sheet(isPresented: $showInfoModalView, content: {
-            NavigationView{
-                filtermodal().navigationTitle("Search Filter")
+            
+                filtermodal()
                 
-            }
+            
         })
     }
 }
