@@ -15,6 +15,7 @@
 		92CCBC122668786B00DBCCBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CCBC112668786B00DBCCBD /* Assets.xcassets */; };
 		92CCBC152668786B00DBCCBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92CCBC142668786B00DBCCBD /* Preview Assets.xcassets */; };
 		92D3B131267113910086F22D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3B130267113910086F22D /* DetailView.swift */; };
+		A896D6BA2671AB9D00C74FDB /* filtermodal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A896D6B92671AB9D00C74FDB /* filtermodal.swift */; };
 		BA21DF0B26705B2200042D2A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA21DF0A26705B2200042D2A /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		92CCBC142668786B00DBCCBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92CCBC162668786B00DBCCBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92D3B130267113910086F22D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A896D6B92671AB9D00C74FDB /* filtermodal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = filtermodal.swift; sourceTree = "<group>"; };
 		BA21DF0A26705B2200042D2A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				BA21DF0A26705B2200042D2A /* SearchBar.swift */,
 				92CCBC0F2668786B00DBCCBD /* MainView.swift */,
+				A896D6B92671AB9D00C74FDB /* filtermodal.swift */,
 				92D3B130267113910086F22D /* DetailView.swift */,
 			);
 			path = View;
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A896D6BA2671AB9D00C74FDB /* filtermodal.swift in Sources */,
 				92CCBC102668786B00DBCCBD /* MainView.swift in Sources */,
 				92CCBC0E2668786B00DBCCBD /* AddictechApp.swift in Sources */,
 				920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */,
