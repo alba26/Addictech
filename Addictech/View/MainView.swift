@@ -16,8 +16,9 @@ struct ContentView: View {
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.002132764552, green: 0.1801773906, blue: 0.4192627668, alpha: 1)
+        
 //        UISearchBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
-        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
+//        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         
     }
    
@@ -31,9 +32,10 @@ struct ContentView: View {
                     
                 }) {
                     Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.white)
                 }
             }
+            .background(Color("navy blue"))
                 List {
                 
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
