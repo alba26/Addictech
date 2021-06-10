@@ -12,9 +12,10 @@ struct FilterButton: ViewModifier {
         content
             .font(.body)
             .padding(12.0)
+            .accentColor(Color("navy blue"))
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke( Color.black, lineWidth: 2))
+                    .stroke( Color.black, lineWidth: 1.5))
     }
 }
 
@@ -33,6 +34,7 @@ struct filtermodal: View {
                     .fontWeight(.semibold)
                 
                 HStack{
+                    
                     Button(action: {}, label: {
                         Text("Ascending")
                     }).modifier(FilterButton())
@@ -54,11 +56,11 @@ struct filtermodal: View {
                     }).modifier(FilterButton())
                     
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("Computer")
+                        Text("Devices")
                     }).modifier(FilterButton())
                     
                     Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                        Text("Website")
+                        Text("Network")
                         
                     }).modifier(FilterButton())
                 }
@@ -74,12 +76,12 @@ struct filtermodal: View {
                                     Button(action: {
                                         
                                     }) {Text("Refresh")
-                                        .foregroundColor(Color(.blue))},
+                                        .foregroundColor(Color("navy blue"))},
                                 trailing:
                                     Button(action: {
                                         
                                     }) {
-                                        Text("Apply").foregroundColor(Color(.blue))})
+                                        Text("Apply").foregroundColor(Color("navy blue"))})
         }
         
     }
