@@ -4,21 +4,21 @@
   "tech_explanation" : "Bandwidth didefinisikan sebagai jumlah informasi yang dapat mengalir melalui koneksi jaringan dalam periode waktu tertentu.",
   "analogy" : "Bandwidth seperti jumlah lajur di jalan raya. Jalan raya besar dengan banyak jalur lalu lintas bergabung dengan jalan yang lebih kecil dengan jalur lalu lintas yang lebih sedikit. Jalan-jalan ini mengarah ke jalan yang lebih kecil dan lebih sempit, dan akhirnya ke jalan masuk rumah dan bisnis. Ketika mobil yang menggunakan sistem jalan raya sangat sedikit, setiap kendaraan dapat bergerak dengan bebas. Ketika lalu lintas bertambah, setiap kendaraan bergerak lebih lambat, terutama di jalan dengan lajur yang lebih sedikit. Ketika semakin banyak lalu lintas memasuki sistem jalan raya, bahkan jalan raya multijalur pun akan menjadi padat dan lambat. Jaringan data sangat mirip dengan sistem jalan raya, dengan paket data yang dianalogikan dengan mobil, dan bandwidth yang dianalogikan dengan jumlah jalur di jalan raya.",
   "tag" : "#networking",
-  "image_name" : "-"
+  "image_name" : "landscape_pic"
   },
   {
   "keywords": "API",
   "tech_explanation" : "Seperangkat definisi dan protokol untuk membangun dan mengintegrasikan perangkat lunak aplikasi. API adalah singkatan dari Application Programming Interface. API memungkinkan produk atau layanan Anda berkomunikasi dengan produk dan layanan lain tanpa harus mengetahui cara penerapannya.",
   "analogy" : "Bayangkan Anda sedang duduk di meja di sebuah restoran dengan menu pilihan untuk dipesan. Dapur adalah bagian dari 'sistem' yang akan menyiapkan pesanan Anda. Apa yang hilang adalah tautan penting untuk mengomunikasikan pesanan Anda ke dapur dan mengantarkan makanan Anda kembali ke meja Anda. Di situlah fungsi dari pelayan (API). Pelayan adalah pembawa pesan (API), yang menerima permintaan atau pesanan Anda dan memberi tahu dapur (sistem), apa yang harus dilakukan. Kemudian pelayan memberikan tanggapan kembali kepada Anda; dalam hal ini adalah makanannya.",
   "tag" : "#web",
-  "image_name" : "-"
+  "image_name" : "rectangle_pic"
   },
   {
   "keywords": "Back-End",
   "tech_explanation" : "bagian dari aplikasi yang bertanggung jawab untuk menyediakan kebutuhan yang tak terlihat oleh pengguna (tidak berinteraksi langsung dengan pengguna), seperti bagaimana data disimpan, diolah, serta ditransaksikan secara aman. Itu semua bertujuan untuk mendukung aplikasi Front-End bekerja sesuai dengan fungsinya. Sosok yang menggeluti bidang ini disebut Back-End Developer.",
   "analogy" : "Back-End dapat dianalogikan seperti barista dalam kedai kopi,  contohnya seperti teknik barista membuat kopi, apa dan bagaimana cara mengoperasikan mesin kopi, laporan keuangan, biaya sewa kedai, dan hal-hal dapur tak terlihat pelanggan lainnya.",
   "tag" : "#development",
-  "image_name" : "-"
+  "image_name" : "potrait_pic"
   },
   {
   "keywords": "Virtual Machine",
