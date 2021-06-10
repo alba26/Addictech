@@ -23,7 +23,13 @@ struct FilterButton: ViewModifier {
 
 
 struct filtermodal: View {
+    init() {
+        UINavigationBar.appearance().backgroundColor = .white
+        UINavigationBar.appearance().barTintColor = .white
+    }
+   
     var body: some View {
+        NavigationView{
         VStack(alignment: .leading, spacing: 20.0){
             Text("Sort")
                 .font(.body)
@@ -62,10 +68,22 @@ struct filtermodal: View {
             
             
         }
-        .padding(.horizontal, 25.0)
-        .frame(width: 330, height: 400.0)
+//        .padding(.horizontal, 25.0)
+//        .frame(width: 330, height: 400.0)
         .offset(y: -125)
-
+        .navigationTitle("Search Filter").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
+        .navigationBarItems(leading:
+           
+            Button(action: {
+            
+        }) {Text("Refresh")
+                .foregroundColor(Color(.blue))},
+        trailing:
+          Button(action: {
+                                        
+           }) {
+            Text("Apply").foregroundColor(Color(.blue))})
+        }
         
     }
 }
