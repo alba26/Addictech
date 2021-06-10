@@ -11,6 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText : String = ""
+    @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
@@ -19,13 +20,25 @@ struct ContentView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
+   
+    
     var body: some View {
         NavigationView {
             VStack {
                 
                 List {
-                    SearchBar(text: $searchText)
-                        .background(Color("DarkBlue"))
+                    HStack{
+                        SearchBar(text: $searchText)
+                        Button(action: {showInfoModalView = true
+                            
+                        }) {
+                            Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
+                                .foregroundColor(Color.blue)
+                        }
+                    }
+                    
+                    
+                        
                     ForEach(self.fetchDictionaries.dictionaryData.filter {
                         self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
                     }, id: \.keywords){item in
@@ -40,7 +53,12 @@ struct ContentView: View {
                 .listStyle(GroupedListStyle())
             }
             .accentColor(Color(.label))
-        }
+        }.sheet(isPresented: $showInfoModalView, content: {
+            NavigationView{
+                filtermodal().navigationTitle("Search Filter")
+                
+            }
+        })
     }
 }
 
