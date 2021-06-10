@@ -47,7 +47,7 @@ struct DetailView: View {
         
             
         }.background(Color("Color"))
-        .ignoresSafeArea(.all)
+        
         
         .navigationBarTitle(dictionary.keywords)
     }
