@@ -11,8 +11,13 @@ struct DetailView: View {
     let dictionary: Dictionary
     var body: some View {
         ScrollView {
+        
             VStack(alignment: .leading, spacing: 15){
                 Spacer()
+                ZStack{
+                    RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
+                        .frame(height: 295.0)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
                 VStack(alignment: .leading, spacing: 5){
                     Text("Tech Explanation")
                         .font(.callout)
@@ -20,19 +25,29 @@ struct DetailView: View {
                     Text(dictionary.tech_explanation)
                         .font(.footnote)
                 }
-                Divider()
+                }
+                
                 VStack(alignment: .leading, spacing: 5){
-                    Text("Analogy")
-                        .font(.callout)
-                        .bold()
-                    Text(dictionary.analogy)
-                        .font(.footnote)
+                    ZStack{
+                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
+                            .frame(height: 295.0)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                        VStack(alignment: .leading, spacing: 5.0){
+                            Text("Analogy")
+                                .font(.callout)
+                                .bold()
+                            Text(dictionary.analogy)
+                                .font(.footnote)
+                        }
+                }
                 }
             }
             .padding(.leading)
             .padding(.trailing)
-           
-        }
+        
+            
+        }.background(Color("Color"))
+        .ignoresSafeArea(.all)
         
         .navigationBarTitle(dictionary.keywords)
     }
