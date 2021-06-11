@@ -67,9 +67,7 @@ struct filtermodal: View {
                 
                 
             }
-            //        .padding(.horizontal, 25.0)
-            //        .frame(width: 330, height: 400.0)
-            .offset(y: -125)
+            .offset(y: -200)
             .navigationTitle("Search Filter").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
             .navigationBarItems(leading:
                                     
