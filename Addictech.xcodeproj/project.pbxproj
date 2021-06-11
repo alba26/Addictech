@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9089FB242672E686000FD934 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089FB232672E686000FD934 /* FavoriteView.swift */; };
 		920406CB2671DCA000EF8F96 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920406CA2671DCA000EF8F96 /* TextToSpeech.swift */; };
 		920BDBF8266DC0EF00CE2046 /* AdditechData.json in Resources */ = {isa = PBXBuildFile; fileRef = 920BDBF7266DC0EF00CE2046 /* AdditechData.json */; };
 		920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BDBFA266DC53500CE2046 /* Dictionary.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9089FB232672E686000FD934 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		920406CA2671DCA000EF8F96 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		920BDBF7266DC0EF00CE2046 /* AdditechData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdditechData.json; sourceTree = "<group>"; };
 		920BDBFA266DC53500CE2046 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				BA21DF0A26705B2200042D2A /* SearchBar.swift */,
 				92CCBC0F2668786B00DBCCBD /* MainView.swift */,
+				9089FB232672E686000FD934 /* FavoriteView.swift */,
 				A896D6B92671AB9D00C74FDB /* filtermodal.swift */,
 				92D3B130267113910086F22D /* DetailView.swift */,
 				920406CA2671DCA000EF8F96 /* TextToSpeech.swift */,
@@ -183,6 +186,7 @@
 				92D3B131267113910086F22D /* DetailView.swift in Sources */,
 				920406CB2671DCA000EF8F96 /* TextToSpeech.swift in Sources */,
 				920BDBFD266DD99800CE2046 /* Dictionaries.swift in Sources */,
+				9089FB242672E686000FD934 /* FavoriteView.swift in Sources */,
 				BA21DF0B26705B2200042D2A /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

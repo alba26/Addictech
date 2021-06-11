@@ -8,12 +8,11 @@
 import SwiftUI
 // var test = "testing"
 
-struct MainView: View {
+struct FavoriteView: View {
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
-    //    var listOfFavorite: [String]
-    
+    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         
@@ -22,16 +21,13 @@ struct MainView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UITableView.appearance().contentInset.top = -35
         
-        
-        
         //        UISearchBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         //        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         
     }
     
-    
     var body: some View {
-        TabView {
+
             NavigationView {
                 ZStack{
                     Color("DarkBlue")
@@ -65,22 +61,13 @@ struct MainView: View {
                                 }
                             }
                             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                            .navigationTitle("Dictionary")
+                            .navigationTitle("Favorite")
                             .listStyle(GroupedListStyle())
                         }
                         .accentColor(Color(.label))
                     }
                 }
             }
-            .tabItem {
-                Label("Dictionary", systemImage: "book.fill")
-            }
-            
-            FavoriteView()
-                .tabItem {
-                    Label("Favorite", systemImage: "star.fill")
-                }
-        }
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
@@ -89,9 +76,16 @@ struct MainView: View {
     }
 }
 
+//func makeUIViewController () -> UINavigationController {
+//    let controller = UINavigationController()
+//    let searchController = UISearchController()
+//    searchController.searchBar.placeholder = "Search"
+//    controller.navigationBar.topItem?.searchController = searchController
+//
+//    return controller
+//}
 
-
-struct MainView_Previews: PreviewProvider {
+struct FavoriteView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .preferredColorScheme(.light)
@@ -100,14 +94,4 @@ struct MainView_Previews: PreviewProvider {
 
 //extension Color {
 //    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
-//}
-
-
-//func makeUIViewController () -> UINavigationController {
-//    let controller = UINavigationController()
-//    let searchController = UISearchController()
-//    searchController.searchBar.placeholder = "Search"
-//    controller.navigationBar.topItem?.searchController = searchController
-//
-//    return controller
 //}
