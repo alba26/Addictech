@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 // var test = "testing"
 
 struct MainView: View {

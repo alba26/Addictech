@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct DetailView: View {
     let dictionary: Dictionary

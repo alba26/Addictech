@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904270F82675F05B001322DA /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 904270F62675F05B001322DA /* Favorite.xcdatamodeld */; };
 		9089FB242672E686000FD934 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089FB232672E686000FD934 /* FavoriteView.swift */; };
 		920406CB2671DCA000EF8F96 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920406CA2671DCA000EF8F96 /* TextToSpeech.swift */; };
 		920BDBF8266DC0EF00CE2046 /* AdditechData.json in Resources */ = {isa = PBXBuildFile; fileRef = 920BDBF7266DC0EF00CE2046 /* AdditechData.json */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		904270F72675F05B001322DA /* Favorite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite.xcdatamodel; sourceTree = "<group>"; };
 		9089FB232672E686000FD934 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		920406CA2671DCA000EF8F96 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		920BDBF7266DC0EF00CE2046 /* AdditechData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdditechData.json; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		920BDBF9266DC49000CE2046 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				904270F62675F05B001322DA /* Favorite.xcdatamodeld */,
 				920BDBFC266DD99800CE2046 /* Dictionaries.swift */,
 				920BDBFA266DC53500CE2046 /* Dictionary.swift */,
 			);
@@ -182,6 +185,7 @@
 				A896D6BA2671AB9D00C74FDB /* filtermodal.swift in Sources */,
 				92CCBC102668786B00DBCCBD /* MainView.swift in Sources */,
 				92CCBC0E2668786B00DBCCBD /* AddictechApp.swift in Sources */,
+				904270F82675F05B001322DA /* Favorite.xcdatamodeld in Sources */,
 				920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */,
 				92D3B131267113910086F22D /* DetailView.swift in Sources */,
 				920406CB2671DCA000EF8F96 /* TextToSpeech.swift in Sources */,
@@ -376,6 +380,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		904270F62675F05B001322DA /* Favorite.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				904270F72675F05B001322DA /* Favorite.xcdatamodel */,
+			);
+			currentVersion = 904270F72675F05B001322DA /* Favorite.xcdatamodel */;
+			path = Favorite.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 92CCBC022668786B00DBCCBD /* Project object */;
 }
