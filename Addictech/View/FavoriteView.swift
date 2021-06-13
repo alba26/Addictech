@@ -7,16 +7,17 @@
 
 import SwiftUI
 //import CoreData
-// var test = "testing"
 
-let favoriteNotificationKey = "com.Addictech.isFavorite"
+// var test = "testing"
+//  let favoriteNotificationKey = "com.Addictech.isFavorite"
 
 struct FavoriteView: View {
-    let Favorite = Notification.Name(rawValue: favoriteNotificationKey)
+    //    let Favorite = Notification.Name(rawValue: favoriteNotificationKey)
+    //    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
-//    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+    
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         
@@ -31,47 +32,47 @@ struct FavoriteView: View {
     }
     
     var body: some View {
-
-            NavigationView {
-                ZStack{
-                    Color("DarkBlue")
-                        .ignoresSafeArea()
-                    VStack{
-                        HStack{
-                            SearchBar(text: $searchText)
-                            Button(action: {showInfoModalView = true
-                                
-                            }) {
-                                Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
-                                    .foregroundColor(Color.white)
-                            }
+        
+        NavigationView {
+            ZStack{
+                Color("DarkBlue")
+                    .ignoresSafeArea()
+                VStack{
+                    HStack{
+                        SearchBar(text: $searchText)
+                        Button(action: {showInfoModalView = true
+                            
+                        }) {
+                            Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
+                                .foregroundColor(Color.white)
                         }
-                        .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 9.0/*@END_MENU_TOKEN@*/)
-                        
-                        ZStack{
-                            RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
-                                .foregroundColor(Color("Color"))
-                                .ignoresSafeArea()
-                            List {
-                                
-                                ForEach(self.fetchDictionaries.dictionaryData.filter {
-                                    self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
-                                }, id: \.keywords){item in
-                                    NavigationLink(
-                                        destination: DetailView(dictionary: item),
-                                        label: {
-                                            Text(item.keywords)
-                                        })
-                                }
-                            }
-                            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                            .navigationTitle("Favorite")
-                            .listStyle(GroupedListStyle())
-                        }
-                        .accentColor(Color(.label))
                     }
+                    .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 9.0/*@END_MENU_TOKEN@*/)
+                    
+                    ZStack{
+                        RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(Color("Color"))
+                            .ignoresSafeArea()
+                        List {
+                            
+                            ForEach(self.fetchDictionaries.dictionaryData.filter {
+                                self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
+                            }, id: \.keywords){item in
+                                NavigationLink(
+                                    destination: DetailView(dictionary: item),
+                                    label: {
+                                        Text(item.keywords)
+                                    })
+                            }
+                        }
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                        .navigationTitle("Favorite")
+                        .listStyle(GroupedListStyle())
+                    }
+                    .accentColor(Color(.label))
                 }
             }
+        }
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()

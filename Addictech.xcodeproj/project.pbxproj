@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		904270F82675F05B001322DA /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 904270F62675F05B001322DA /* Favorite.xcdatamodeld */; };
 		9089FB242672E686000FD934 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089FB232672E686000FD934 /* FavoriteView.swift */; };
+		90BBA7072676A892009DC902 /* Favorite+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBA7052676A892009DC902 /* Favorite+CoreDataClass.swift */; };
+		90BBA7082676A892009DC902 /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBA7062676A892009DC902 /* Favorite+CoreDataProperties.swift */; };
+		90BBA7462676B500009DC902 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BBA7452676B500009DC902 /* Persistence.swift */; };
 		920406CB2671DCA000EF8F96 /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920406CA2671DCA000EF8F96 /* TextToSpeech.swift */; };
 		920BDBF8266DC0EF00CE2046 /* AdditechData.json in Resources */ = {isa = PBXBuildFile; fileRef = 920BDBF7266DC0EF00CE2046 /* AdditechData.json */; };
 		920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BDBFA266DC53500CE2046 /* Dictionary.swift */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		904270F72675F05B001322DA /* Favorite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite.xcdatamodel; sourceTree = "<group>"; };
 		9089FB232672E686000FD934 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		90BBA7052676A892009DC902 /* Favorite+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataClass.swift"; sourceTree = "<group>"; };
+		90BBA7062676A892009DC902 /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90BBA7452676B500009DC902 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		920406CA2671DCA000EF8F96 /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		920BDBF7266DC0EF00CE2046 /* AdditechData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AdditechData.json; sourceTree = "<group>"; };
 		920BDBFA266DC53500CE2046 /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -54,7 +60,8 @@
 		920BDBF9266DC49000CE2046 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				904270F62675F05B001322DA /* Favorite.xcdatamodeld */,
+				90BBA7052676A892009DC902 /* Favorite+CoreDataClass.swift */,
+				90BBA7062676A892009DC902 /* Favorite+CoreDataProperties.swift */,
 				920BDBFC266DD99800CE2046 /* Dictionaries.swift */,
 				920BDBFA266DC53500CE2046 /* Dictionary.swift */,
 			);
@@ -85,8 +92,10 @@
 				920BDBF7266DC0EF00CE2046 /* AdditechData.json */,
 				92CCBC0D2668786B00DBCCBD /* AddictechApp.swift */,
 				92CCBC162668786B00DBCCBD /* Info.plist */,
+				904270F62675F05B001322DA /* Favorite.xcdatamodeld */,
 				92CCBC112668786B00DBCCBD /* Assets.xcassets */,
 				92CCBC132668786B00DBCCBD /* Preview Content */,
+				90BBA7452676B500009DC902 /* Persistence.swift */,
 			);
 			path = Addictech;
 			sourceTree = "<group>";
@@ -186,7 +195,10 @@
 				92CCBC102668786B00DBCCBD /* MainView.swift in Sources */,
 				92CCBC0E2668786B00DBCCBD /* AddictechApp.swift in Sources */,
 				904270F82675F05B001322DA /* Favorite.xcdatamodeld in Sources */,
+				90BBA7072676A892009DC902 /* Favorite+CoreDataClass.swift in Sources */,
+				90BBA7082676A892009DC902 /* Favorite+CoreDataProperties.swift in Sources */,
 				920BDBFB266DC53500CE2046 /* Dictionary.swift in Sources */,
+				90BBA7462676B500009DC902 /* Persistence.swift in Sources */,
 				92D3B131267113910086F22D /* DetailView.swift in Sources */,
 				920406CB2671DCA000EF8F96 /* TextToSpeech.swift in Sources */,
 				920BDBFD266DD99800CE2046 /* Dictionaries.swift in Sources */,

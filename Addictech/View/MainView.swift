@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
-import CoreData
+// import CoreData
 // var test = "testing"
 
 struct MainView: View {
+    
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
@@ -83,6 +84,10 @@ struct MainView: View {
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
         })
+        
+    }
+    
+    private func addToFavorite() {
         
     }
 }
