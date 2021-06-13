@@ -18,6 +18,7 @@ struct DetailView: View {
 //    var isFavorite: FetchedResults<Favorite>.Element
     
     @State var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+    
     var body: some View {
         
         List{
@@ -146,6 +147,19 @@ struct DetailView: View {
         }
     }
   
+//    func updateFavorite(techterm: String, isFavorite: Bool) {
+//        let newFavorite = Favorite(context: viewContext)
+//        if isFavorite == false {
+//            newFavorite.techTerm = dictionary.keywords
+//            newFavorite.isFavorite = true
+//        } else {
+//            newFavorite.techTerm = nil
+//            newFavorite.isFavorite = false
+//        }
+//
+//        saveContext()
+//    }
+    
     func updateFavorite() {
         let newFavorite = Favorite(context: viewContext)
         if isFavorite == false {
@@ -155,7 +169,7 @@ struct DetailView: View {
             newFavorite.techTerm = nil
             newFavorite.isFavorite = false
         }
-        
+
         saveContext()
     }
     
