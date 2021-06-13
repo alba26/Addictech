@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
-import CoreData
+//import CoreData
 // var test = "testing"
 
+let favoriteNotificationKey = "com.Addictech.isFavorite"
+
 struct FavoriteView: View {
+    let Favorite = Notification.Name(rawValue: favoriteNotificationKey)
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
-    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+//    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
     init() {
         UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         

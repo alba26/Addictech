@@ -11,7 +11,7 @@ import CoreData
 struct DetailView: View {
     let dictionary: Dictionary
     var textSpeech = TextToSpeech()
-    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+    @State var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
     var body: some View {
         
         List{
@@ -36,11 +36,21 @@ struct DetailView: View {
                     Text(dictionary.tech_explanation)
                     Spacer()
                     Button(action: {
-                        self.isFavorite = true
+                        self.isFavorite.toggle()
                         UserDefaults.standard.set(self.isFavorite, forKey: "Tap")
-                    }, label: {
-                        Image(systemName: "star")
-                    })
+                    }) {
+                        //Image(systemName: "star")
+                    }
+                    
+                    if !isFavorite {
+                        Image (systemName: "star")
+                            .renderingMode(.original)
+                    } else {
+                        Image (systemName: "star.fill")
+                            .renderingMode(.original)
+//                        let name = Notification.Name(rawValue: favoriteNotificationKey)
+//                        NotificationCenter.default.post(name: name, object: nil)
+                    }
                 }
             }
             
@@ -110,6 +120,10 @@ struct DetailView: View {
         //        }
         //        .background(Color("Color"))
         //        .navigationBarTitle(dictionary.keywords, displayMode: .inline)
+    }
+    
+    func addToFavorite() {
+        
     }
 }
 
