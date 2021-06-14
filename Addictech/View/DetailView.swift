@@ -14,10 +14,8 @@ struct DetailView: View {
     private var favorites: FetchedResults<Favorite>
     let dictionary: Dictionary
     var textSpeech = TextToSpeech()
-
-//    var isFavorite: FetchedResults<Favorite>.Element
-    
-    @State var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+  
+    @State var isFavorite = false
     
     var body: some View {
         
@@ -71,12 +69,11 @@ struct DetailView: View {
                     .font(.body)
                     .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
                     
-                
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             .navigationBarItems(trailing: Button(action: {
-                self.isFavorite.toggle()
                 updateFavorite()
+                self.isFavorite.toggle()
             }, label: {
                 if !isFavorite {
                     Image (systemName: "star")
@@ -92,7 +89,6 @@ struct DetailView: View {
         
         .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("", displayMode: .inline)
-        
         
         //        ScrollView {
         //            VStack{
@@ -170,11 +166,12 @@ struct DetailView: View {
         if isFavorite == false {
             newFavorite.techTerm = dictionary.keywords
             newFavorite.isFavorite = true
+            print("atas")
         } else {
-            newFavorite.techTerm = nil
+            newFavorite.techTerm = dictionary.keywords
             newFavorite.isFavorite = false
+            print("bawah")
         }
-
         saveContext()
     }
     
