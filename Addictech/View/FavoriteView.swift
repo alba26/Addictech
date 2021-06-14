@@ -66,7 +66,7 @@ struct FavoriteView: View {
                             }
                         }
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                        .navigationTitle("Favorite")
+                        .navigationTitle("Favorites")
                         .listStyle(GroupedListStyle())
                     }
                     .accentColor(Color(.label))

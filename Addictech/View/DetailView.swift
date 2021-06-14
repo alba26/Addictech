@@ -57,10 +57,11 @@ struct DetailView: View {
                     //                        NotificationCenter.default.post(name: name, object: nil)
                     //                    }
                 }
-            }
+            }.padding(.vertical)
            
             
             Section(header: Text("Analogy")){
+                
                 Image("potrait_pic")
                     .resizable()
                     .scaledToFit()
