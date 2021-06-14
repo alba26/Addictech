@@ -14,6 +14,9 @@ import SwiftUI
 struct FavoriteView: View {
     //    let Favorite = Notification.Name(rawValue: favoriteNotificationKey)
     //    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: [])
+    private var favorites: FetchedResults<Favorite>
     @State private var searchText : String = ""
     @State var showInfoModalView: Bool = false
     @ObservedObject var fetchDictionaries = Dictionaries()
@@ -53,18 +56,25 @@ struct FavoriteView: View {
                         RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
                             .foregroundColor(Color("Color"))
                             .ignoresSafeArea()
-                        List {
+//                        List {
+//
+//                            ForEach(self.fetchDictionaries.dictionaryData.filter {
+//                                self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
+//                            }, id: \.keywords){item in
+//                                NavigationLink(
+//                                    destination: DetailView(dictionary: item),
+//                                    label: {
+//                                        Text(item.keywords)
+//                                    })
+//                            }
+//                        }
                             
-                            ForEach(self.fetchDictionaries.dictionaryData.filter {
-                                self.searchText.isEmpty ? true : $0.keywords.lowercased().contains(self.searchText.lowercased())
-                            }, id: \.keywords){item in
-                                NavigationLink(
-                                    destination: DetailView(dictionary: item),
-                                    label: {
-                                        Text(item.keywords)
-                                    })
-                            }
-                        }
+                        List {
+                            ForEach(self.favorites) {favorite in
+                                Text(favorite.techTerm ?? "Untitled")
+                            
+                            }}
+                            
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                         .navigationTitle("Favorites")
                         .listStyle(GroupedListStyle())
