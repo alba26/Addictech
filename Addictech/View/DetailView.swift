@@ -29,12 +29,14 @@ struct DetailView: View {
                 
                 
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
             
             Section(header: Text("Tech Explanation")){
                 
                 HStack {
                     Text(dictionary.tech_explanation)
+                        .font(.body)
+                        .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
                     Spacer()
                     Button(action: {
                         self.isFavorite = true
@@ -44,8 +46,7 @@ struct DetailView: View {
                     })
                 }
             }
-            
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+           
             
             Section(header: Text("Analogy")){
                 if dictionary.image_name == "-"{
@@ -61,9 +62,12 @@ struct DetailView: View {
                 }
                 
                 Text(dictionary.analogy)
+                    .font(.body)
+                    .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
+                    
                 
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
             
         }
         .listStyle(InsetGroupedListStyle())
