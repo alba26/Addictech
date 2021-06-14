@@ -31,7 +31,7 @@ struct DetailView: View {
                         self.textSpeech.speak(keywords: dictionary.keywords)
                     }, label: {
                         Image(systemName: "speaker.wave.2.fill")
-                    })
+                            .accentColor(.blue)                    })
                     .buttonStyle(BorderlessButtonStyle())
                 }
             }

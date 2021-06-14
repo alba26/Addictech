@@ -73,6 +73,7 @@ struct FavoriteView: View {
                 }
             }
         }
+        .accentColor(.white)
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()

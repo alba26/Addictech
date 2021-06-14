@@ -71,6 +71,8 @@ struct MainView: View {
                     }
                 }
             }
+            .accentColor(.white)
+            
             .tabItem {
                 Label("Dictionary", systemImage: "book.fill")
             }
@@ -79,7 +81,8 @@ struct MainView: View {
                 .tabItem {
                     Label("Favorites", systemImage: "star.fill")
                 }
-        }.accentColor(Color("TabBarButton"))
+            
+        }
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
