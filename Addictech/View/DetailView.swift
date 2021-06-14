@@ -27,12 +27,14 @@ struct DetailView: View {
                     .buttonStyle(BorderlessButtonStyle())
                 }
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
             
             Section(header: Text("Tech Explanation")){
                 
                 HStack {
                     Text(dictionary.tech_explanation)
+                        .font(.body)
+                        .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
                     Spacer()
                     Button(action: {
                         self.isFavorite = true
@@ -42,8 +44,7 @@ struct DetailView: View {
                     })
                 }
             }
-            
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+           
             
             Section(header: Text("Analogy")){
                 Image("potrait_pic")
@@ -52,9 +53,12 @@ struct DetailView: View {
                     .padding(.top)
                 
                 Text(dictionary.analogy)
+                    .font(.body)
+                    .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
+                    
                 
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
             
         }
         
