@@ -62,7 +62,7 @@ struct DetailView: View {
             
             Section(header: Text("Analogy")){
                 
-                Image("potrait_pic")
+                Image(dictionary.image_name)
                     .resizable()
                     .scaledToFit()
                     .padding(.top)
