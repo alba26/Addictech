@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-//import CoreData
+//  import CoreData
 
-// var test = "testing"
+//  var test = "testing"
 //  let favoriteNotificationKey = "com.Addictech.isFavorite"
 
 struct FavoriteView: View {
@@ -66,13 +66,14 @@ struct FavoriteView: View {
                             }
                         }
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                        .navigationTitle("Favorite")
+                        .navigationTitle("Favorites")
                         .listStyle(GroupedListStyle())
                     }
                     .accentColor(Color(.label))
                 }
             }
         }
+        .accentColor(.white)
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
