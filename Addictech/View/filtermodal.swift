@@ -12,7 +12,7 @@ struct FilterButton: ViewModifier {
         content
             .font(.body)
             .padding(12.0)
-            .accentColor(Color("navy blue"))
+            .accentColor(Color("DarkBlue"))
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
                     .stroke( Color.black, lineWidth: 1.5))
@@ -21,6 +21,7 @@ struct FilterButton: ViewModifier {
 
 
 struct filtermodal: View {
+    @Environment(\.presentationMode) private var presentationMode
     init() {
         UINavigationBar.appearance().backgroundColor = .white
         UINavigationBar.appearance().barTintColor = .white
@@ -35,7 +36,7 @@ struct filtermodal: View {
                     .font(.body)
                     .fontWeight(.semibold)
                 
-                HStack{
+                HStack(){
                     
                     Button(action: {}, label: {
                         Text("Ascending")
@@ -71,19 +72,25 @@ struct filtermodal: View {
                 
             }
             .frame(width: UIScreen.main.bounds.width)
-            .offset(y: -200)
-            .navigationTitle("Search Filter").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
+            .offset(x: -50,y: -230)
             .navigationBarItems(leading:
-                                    
                                     Button(action: {
-                                        
-                                    }) {Text("Refresh")
+                                        self.presentationMode.wrappedValue.dismiss()
+                                    }) {Text("Cancel")
                                         .foregroundColor(Color("navy blue"))},
                                 trailing:
-                                    Button(action: {
-                                        
-                                    }) {
-                                        Text("Apply").foregroundColor(Color("navy blue"))})
+                                    HStack{
+                                        Button(action: {
+                                            
+                                            
+                                        }) {
+                                            Text("Apply").foregroundColor(Color("navy blue"))}
+                                        Button(action: {
+                                            
+                                        }) {
+                                            Image(systemName: "arrow.clockwise").foregroundColor(Color("navy blue"))}
+                                    }
+                                   )
         }
         
     }

@@ -24,10 +24,13 @@ struct MainView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UITableView.appearance().contentInset.top = -35
         
+        
+        
         //        UISearchBar.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         //        UITableView.appearance().backgroundColor = #colorLiteral(red: 0, green: 0.1807721257, blue: 0.4193686843, alpha: 1)
         
     }
+    
     
     var body: some View {
         TabView {
@@ -82,7 +85,7 @@ struct MainView: View {
                     Label("Favorites", systemImage: "star.fill")
                 }
             
-        }
+        }.accentColor(Color("DarkBlue"))
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
@@ -95,14 +98,7 @@ struct MainView: View {
     }
 }
 
-//func makeUIViewController () -> UINavigationController {
-//    let controller = UINavigationController()
-//    let searchController = UISearchController()
-//    searchController.searchBar.placeholder = "Search"
-//    controller.navigationBar.topItem?.searchController = searchController
-//    
-//    return controller
-//}
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
@@ -113,4 +109,14 @@ struct MainView_Previews: PreviewProvider {
 
 //extension Color {
 //    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
+//}
+
+
+//func makeUIViewController () -> UINavigationController {
+//    let controller = UINavigationController()
+//    let searchController = UISearchController()
+//    searchController.searchBar.placeholder = "Search"
+//    controller.navigationBar.topItem?.searchController = searchController
+//
+//    return controller
 //}

@@ -29,9 +29,11 @@ struct DetailView: View {
                         self.textSpeech.speak(keywords: dictionary.keywords)
                     }, label: {
                         Image(systemName: "speaker.wave.2.fill")
-                            .accentColor(.blue)                    })
+                            .accentColor(Color("DarkBlue"))                    })
                     .buttonStyle(BorderlessButtonStyle())
                 }
+                
+                
             }
             .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
             
@@ -59,11 +61,17 @@ struct DetailView: View {
            
             
             Section(header: Text("Analogy")){
-                
-                Image("potrait_pic")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.top)
+                if dictionary.image_name == "-"{
+                    Image("potrait_pic")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.top)
+                }else{
+                    Image(dictionary.image_name)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.top)
+                }
                 
                 Text(dictionary.analogy)
                     .font(.body)
@@ -77,16 +85,15 @@ struct DetailView: View {
             }, label: {
                 if !isFavorite {
                     Image (systemName: "star")
-                        .renderingMode(.template)
+//                        .renderingMode(.template)
                         .foregroundColor(.white)
                 } else {
                     Image (systemName: "star.fill")
-                        .renderingMode(.original)
+//                        .renderingMode(.original)
                         .foregroundColor(.white)
                 }
             }))
         }
-        
         .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("", displayMode: .inline)
         
