@@ -80,9 +80,11 @@ struct DetailView: View {
                 if !isFavorite {
                     Image (systemName: "star")
                         .renderingMode(.template)
+                        .foregroundColor(.white)
                 } else {
                     Image (systemName: "star.fill")
                         .renderingMode(.original)
+                        .foregroundColor(.white)
                 }
             }))
         }
