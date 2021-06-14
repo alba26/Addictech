@@ -73,6 +73,7 @@ struct filtermodal: View {
             }
             .frame(width: UIScreen.main.bounds.width)
             .offset(x: -50,y: -230)
+            .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(leading:
                                     Button(action: {
                                         self.presentationMode.wrappedValue.dismiss()
@@ -99,5 +100,6 @@ struct filtermodal: View {
 struct filtermodal_Previews: PreviewProvider {
     static var previews: some View {
         filtermodal()
+            .preferredColorScheme(.dark)
     }
 }
