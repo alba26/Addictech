@@ -28,7 +28,9 @@ struct filtermodal: View {
     
     var body: some View {
         NavigationView{
+            
             VStack(alignment: .leading, spacing: 20.0){
+                
                 Text("Sort")
                     .font(.body)
                     .fontWeight(.semibold)
@@ -66,7 +68,9 @@ struct filtermodal: View {
                 }
                 
                 
+                
             }
+            .frame(width: UIScreen.main.bounds.width)
             .offset(y: -200)
             .navigationTitle("Search Filter").navigationBarTitleDisplayMode(/*@START_MENU_TOKEN@*/.inline/*@END_MENU_TOKEN@*/)
             .navigationBarItems(leading:
