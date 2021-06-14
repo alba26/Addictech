@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct DetailView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: [])
+    private var favorites: FetchedResults<Favorite>
     let dictionary: Dictionary
     var textSpeech = TextToSpeech()
-    @State private var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+
+//    var isFavorite: FetchedResults<Favorite>.Element
+    
+    @State var isFavorite = UserDefaults.standard.bool(forKey: "Tap")
+    
     var body: some View {
         
         List{
@@ -35,15 +43,21 @@ struct DetailView: View {
                 
                 HStack {
                     Text(dictionary.tech_explanation)
-                        .font(.body)
-                        .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                    Button(action: {
-                        self.isFavorite = true
-                        UserDefaults.standard.set(self.isFavorite, forKey: "Tap")
-                    }, label: {
-                        Image(systemName: "star")
-                    })
+                    //                    Spacer()
+                    //                    Button(action: {
+                    //                        self.isFavorite.toggle()
+                    //                        UserDefaults.standard.set(self.isFavorite, forKey: "Tap")
+                    //                    }) {}
+                    //
+                    //                    if !isFavorite {
+                    //                        Image (systemName: "star")
+                    //                            .renderingMode(.original)
+                    //                    } else {
+                    //                        Image (systemName: "star.fill")
+                    //                            .renderingMode(.original)
+                    //                        let name = Notification.Name(rawValue: favoriteNotificationKey)
+                    //                        NotificationCenter.default.post(name: name, object: nil)
+                    //                    }
                 }
             }
            
@@ -67,8 +81,19 @@ struct DetailView: View {
                     
                 
             }
-            
-            
+            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .navigationBarItems(trailing: Button(action: {
+                self.isFavorite.toggle()
+                updateFavorite()
+            }, label: {
+                if !isFavorite {
+                    Image (systemName: "star")
+                        .renderingMode(.template)
+                } else {
+                    Image (systemName: "star.fill")
+                        .renderingMode(.original)
+                }
+            }))
         }
         .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("", displayMode: .inline)
@@ -122,6 +147,54 @@ struct DetailView: View {
         //        .background(Color("Color"))
         //        .navigationBarTitle(dictionary.keywords, displayMode: .inline)
     }
+    
+    private func saveContext() {
+        do {
+            try viewContext.save()
+        } catch {
+            let error = error as NSError
+            fatalError("Unresolved Error: \(error)")
+        }
+    }
+  
+//    func updateFavorite(techterm: String, isFavorite: Bool) {
+//        let newFavorite = Favorite(context: viewContext)
+//        if isFavorite == false {
+//            newFavorite.techTerm = dictionary.keywords
+//            newFavorite.isFavorite = true
+//        } else {
+//            newFavorite.techTerm = nil
+//            newFavorite.isFavorite = false
+//        }
+//
+//        saveContext()
+//    }
+    
+    func updateFavorite() {
+        let newFavorite = Favorite(context: viewContext)
+        if isFavorite == false {
+            newFavorite.techTerm = dictionary.keywords
+            newFavorite.isFavorite = true
+        } else {
+            newFavorite.techTerm = nil
+            newFavorite.isFavorite = false
+        }
+
+        saveContext()
+    }
+    
+//    func updateFavorite(_ favorites: FetchedResults<Favorite>.Element) {
+//        let newFavorite = Favorite(context: viewContext)
+//        if isFavorite == false {
+//            newFavorite.techTerm = dictionary.keywords
+//            newFavorite.isFavorite = true
+//        } else {
+//            newFavorite.techTerm = nil
+//            newFavorite.isFavorite = false
+//        }
+//
+//        saveContext()
+//    }
 }
 
 struct DetailView_Previews: PreviewProvider {
