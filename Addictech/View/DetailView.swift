@@ -29,7 +29,7 @@ struct DetailView: View {
                         self.textSpeech.speak(keywords: dictionary.keywords)
                     }, label: {
                         Image(systemName: "speaker.wave.2.fill")
-                            .accentColor(.blue)                    })
+                            .accentColor(Color("DarkBlue"))                    })
                     .buttonStyle(BorderlessButtonStyle())
                 }
                 
@@ -85,11 +85,11 @@ struct DetailView: View {
             }, label: {
                 if !isFavorite {
                     Image (systemName: "star")
-                        .renderingMode(.template)
+//                        .renderingMode(.template)
                         .foregroundColor(.white)
                 } else {
                     Image (systemName: "star.fill")
-                        .renderingMode(.original)
+//                        .renderingMode(.original)
                         .foregroundColor(.white)
                 }
             }))

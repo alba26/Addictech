@@ -85,7 +85,7 @@ struct MainView: View {
                     Label("Favorites", systemImage: "star.fill")
                 }
             
-        }
+        }.accentColor(Color("DarkBlue"))
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
