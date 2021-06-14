@@ -21,7 +21,7 @@ struct DetailView: View {
         
         List{
             Section(){
-                HStack(spacing: 20.0){
+                HStack(spacing: 10.0){
                     Text(dictionary.keywords)
                         .font(.title)
                         .fontWeight(.bold)
@@ -38,26 +38,11 @@ struct DetailView: View {
             .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
             
             Section(header: Text("Tech Explanation")){
-                
                 HStack {
                     Text(dictionary.tech_explanation)
-                    //                    Spacer()
-                    //                    Button(action: {
-                    //                        self.isFavorite.toggle()
-                    //                        UserDefaults.standard.set(self.isFavorite, forKey: "Tap")
-                    //                    }) {}
-                    //
-                    //                    if !isFavorite {
-                    //                        Image (systemName: "star")
-                    //                            .renderingMode(.original)
-                    //                    } else {
-                    //                        Image (systemName: "star.fill")
-                    //                            .renderingMode(.original)
-                    //                        let name = Notification.Name(rawValue: favoriteNotificationKey)
-                    //                        NotificationCenter.default.post(name: name, object: nil)
-                    //                    }
+                        .padding(.vertical)
                 }
-            }.padding(.vertical)
+            }
            
             
             Section(header: Text("Analogy")){
@@ -78,24 +63,25 @@ struct DetailView: View {
                     .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
                     
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            .navigationBarItems(trailing: Button(action: {
-                updateFavorite()
-                self.isFavorite.toggle()
-            }, label: {
-                if !isFavorite {
-                    Image (systemName: "star")
-//                        .renderingMode(.template)
-                        .foregroundColor(.white)
-                } else {
-                    Image (systemName: "star.fill")
-//                        .renderingMode(.original)
-                        .foregroundColor(.white)
-                }
-            }))
+            
+            
         }
         .listStyle(InsetGroupedListStyle())
         .navigationBarTitle("", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            updateFavorite()
+            self.isFavorite.toggle()
+        }, label: {
+            if !isFavorite {
+                Image (systemName: "star")
+//                        .renderingMode(.template)
+                    .foregroundColor(.white)
+            } else {
+                Image (systemName: "star.fill")
+//                        .renderingMode(.original)
+                    .foregroundColor(.white)
+            }
+        }))
         
         //        ScrollView {
         //            VStack{
