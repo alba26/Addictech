@@ -6,9 +6,9 @@
 //
 
 import SwiftUI
-//import CoreData
+//  import CoreData
 
-// var test = "testing"
+//  var test = "testing"
 //  let favoriteNotificationKey = "com.Addictech.isFavorite"
 
 struct FavoriteView: View {
@@ -73,6 +73,7 @@ struct FavoriteView: View {
                 }
             }
         }
+        .accentColor(.white)
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
