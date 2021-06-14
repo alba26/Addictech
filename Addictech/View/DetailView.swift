@@ -35,7 +35,7 @@ struct DetailView: View {
                     .buttonStyle(BorderlessButtonStyle())
                 }
             }
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
             
             Section(header: Text("Tech Explanation")){
                 
@@ -58,8 +58,7 @@ struct DetailView: View {
                     //                    }
                 }
             }
-            
-            .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+           
             
             Section(header: Text("Analogy")){
                 Image("potrait_pic")
@@ -68,6 +67,9 @@ struct DetailView: View {
                     .padding(.top)
                 
                 Text(dictionary.analogy)
+                    .font(.body)
+                    .padding(/*@START_MENU_TOKEN@*/.vertical/*@END_MENU_TOKEN@*/)
+                    
                 
             }
             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)

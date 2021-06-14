@@ -77,9 +77,9 @@ struct MainView: View {
             
             FavoriteView()
                 .tabItem {
-                    Label("Favorite", systemImage: "star.fill")
+                    Label("Favorites", systemImage: "star.fill")
                 }
-        }
+        }.accentColor(Color("TabBarButton"))
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()
