@@ -15,7 +15,8 @@ struct FilterButton: ViewModifier {
             .accentColor(Color("TabBarButton"))
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke( Color.black, lineWidth: 1.5))
+                    .stroke( Color("Color-1"), lineWidth: 1.5))
+        
     }
 }
 
@@ -26,7 +27,7 @@ struct filtermodal: View {
         UINavigationBar.appearance().backgroundColor = .white
         UINavigationBar.appearance().barTintColor = .white
     }
-    
+
     var body: some View {
         NavigationView{
             
@@ -78,18 +79,19 @@ struct filtermodal: View {
                                     Button(action: {
                                         self.presentationMode.wrappedValue.dismiss()
                                     }) {Text("Cancel")
-                                        .foregroundColor(Color("navy blue"))},
+                                        .foregroundColor(Color.blue)
+                                        },
                                 trailing:
                                     HStack{
                                         Button(action: {
                                             
                                             
                                         }) {
-                                            Text("Apply").foregroundColor(Color("navy blue"))}
+                                            Text("Apply").foregroundColor(Color.blue)}
                                         Button(action: {
                                             
                                         }) {
-                                            Image(systemName: "arrow.clockwise").foregroundColor(Color("navy blue"))}
+                                            Image(systemName: "arrow.clockwise").foregroundColor(Color.blue)}
                                     }
                                    )
         }
