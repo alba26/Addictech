@@ -49,6 +49,7 @@ struct MainView: View {
                             }
                         }
                         .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 9.0/*@END_MENU_TOKEN@*/)
+                     
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
@@ -69,6 +70,7 @@ struct MainView: View {
                             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                             .navigationTitle("Dictionary")
                             .listStyle(GroupedListStyle())
+                            
                         }
                         .accentColor(Color(.label))
                     }
@@ -106,6 +108,7 @@ struct MainView_Previews: PreviewProvider {
             .preferredColorScheme(.light)
     }
 }
+
 
 //extension Color {
 //    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
