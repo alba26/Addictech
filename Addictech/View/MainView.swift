@@ -49,6 +49,7 @@ struct MainView: View {
                             }
                         }
                         .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 9.0/*@END_MENU_TOKEN@*/)
+                     
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Corner Radius@*/21.0/*@END_MENU_TOKEN@*/)
@@ -69,6 +70,7 @@ struct MainView: View {
                             .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                             .navigationTitle("Dictionary")
                             .listStyle(GroupedListStyle())
+                            
                         }
                         .accentColor(Color(.label))
                     }
@@ -105,6 +107,13 @@ struct MainView_Previews: PreviewProvider {
         MainView()
             .preferredColorScheme(.light)
     }
+}
+
+
+extension View{
+    func hideKeyboard() {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
 }
 
 //extension Color {
