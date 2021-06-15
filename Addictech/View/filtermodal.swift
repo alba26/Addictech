@@ -12,7 +12,7 @@ struct FilterButton: ViewModifier {
         content
             .font(.body)
             .padding(12.0)
-            .accentColor(Color("DarkBlue"))
+            .accentColor(Color("TabBarButton"))
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
                     .stroke( Color.black, lineWidth: 1.5))
