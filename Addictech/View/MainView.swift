@@ -110,12 +110,6 @@ struct MainView_Previews: PreviewProvider {
 }
 
 
-extension View{
-    func hideKeyboard() {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
-}
-
 //extension Color {
 //    static let darkBlue = Color(red: 00 / 255, green: 17 / 255, blue: 67 / 255)
 //}
