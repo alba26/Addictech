@@ -85,7 +85,7 @@ struct MainView: View {
                     Label("Favorites", systemImage: "star.fill")
                 }
             
-        }.accentColor(Color("DarkBlue"))
+        }.accentColor(Color("TabBarButton"))
         
         .sheet(isPresented: $showInfoModalView, content: {
             filtermodal()

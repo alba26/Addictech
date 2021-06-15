@@ -29,7 +29,7 @@ struct DetailView: View {
                         self.textSpeech.speak(keywords: dictionary.keywords)
                     }, label: {
                         Image(systemName: "speaker.wave.2.fill")
-                            .accentColor(Color("DarkBlue"))                    })
+                            .accentColor(Color("TabBarButton"))                    })
                     .buttonStyle(BorderlessButtonStyle())
                 }
                 
