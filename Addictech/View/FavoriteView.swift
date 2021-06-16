@@ -42,13 +42,13 @@ struct FavoriteView: View {
                     .ignoresSafeArea()
                 VStack{
                     HStack{
-                        SearchBar(text: $searchText)
-                        Button(action: {showInfoModalView = true
-                            
-                        }) {
-                            Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
-                                .foregroundColor(Color.white)
-                        }
+//                        SearchBar(text: $searchText)
+//                        Button(action: {showInfoModalView = true
+//                            
+//                        }) {
+//                            Image(systemName: "line.horizontal.3.decrease.circle").imageScale(.large)
+//                                .foregroundColor(Color.white)
+//                        }
                     }
                     .padding(/*@START_MENU_TOKEN@*/[.leading, .bottom, .trailing], 9.0/*@END_MENU_TOKEN@*/)
                     
